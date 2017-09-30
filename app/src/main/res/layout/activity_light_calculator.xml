@@ -1,0 +1,268 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.example.mstefanovic2598.destiny2app.LightCalculator">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true" />
+        <!--android:text="@string/dummy_content"
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold" />-->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <!--<Button
+                android:id="@+id/dummy_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dummy_button" />-->
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editKineticWeapon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textPowerWeapon"
+        android:layout_toEndOf="@+id/textPowerWeapon"
+        android:layout_marginTop="45dp" />
+
+    <EditText
+        android:id="@+id/editEnergyWeapon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:layout_below="@+id/editKineticWeapon"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editPowerWeapon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:layout_below="@+id/editEnergyWeapon"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editHelmet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:layout_below="@+id/editPowerWeapon"
+        android:layout_alignLeft="@+id/editGauntlets"
+        android:layout_alignStart="@+id/editGauntlets" />
+
+    <EditText
+        android:id="@+id/editGauntlets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:layout_below="@+id/editHelmet"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editChest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:layout_below="@+id/editGauntlets"
+        android:layout_alignLeft="@+id/editLegs"
+        android:layout_alignStart="@+id/editLegs" />
+
+    <EditText
+        android:id="@+id/editLegs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:layout_below="@+id/editChest"
+        android:layout_alignLeft="@+id/editClassItem"
+        android:layout_alignStart="@+id/editClassItem" />
+
+    <EditText
+        android:id="@+id/editClassItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        android:layout_below="@+id/editLegs"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/textKineticWeapon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="6pt"
+        android:text="Kinetic Weapon"
+        android:layout_alignBaseline="@+id/editKineticWeapon"
+        android:layout_alignBottom="@+id/editKineticWeapon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/editKineticWeapon"
+        android:layout_toStartOf="@+id/editKineticWeapon" />
+
+    <EditText
+        android:id="@+id/textEnergyWeapon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Energy Weapon"
+        android:textSize="6pt"
+        android:layout_alignBaseline="@+id/editEnergyWeapon"
+        android:layout_alignBottom="@+id/editEnergyWeapon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/editKineticWeapon"
+        android:layout_toStartOf="@+id/editKineticWeapon" />
+
+    <EditText
+        android:id="@+id/textPowerWeapon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editEnergyWeapon"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Power Weapon"
+        android:textSize="6pt"
+        android:layout_toLeftOf="@+id/editEnergyWeapon"
+        android:layout_toStartOf="@+id/editEnergyWeapon" />
+
+    <EditText
+        android:id="@+id/textHelmet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editPowerWeapon"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Helmet"
+        android:textSize="6pt"
+        android:layout_toLeftOf="@+id/editPowerWeapon"
+        android:layout_toStartOf="@+id/editPowerWeapon" />
+
+    <EditText
+        android:id="@+id/textGauntlets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editHelmet"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Gauntlets"
+        android:textSize="6pt"
+        android:layout_toLeftOf="@+id/editHelmet"
+        android:layout_toStartOf="@+id/editHelmet" />
+
+    <EditText
+        android:id="@+id/textChest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editGauntlets"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Chest"
+        android:textSize="6pt"
+        android:layout_toLeftOf="@+id/editGauntlets"
+        android:layout_toStartOf="@+id/editGauntlets" />
+
+    <EditText
+        android:id="@+id/textLegs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editChest"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Legs"
+        android:textSize="6pt"
+        android:layout_toLeftOf="@+id/editChest"
+        android:layout_toStartOf="@+id/editChest" />
+
+    <EditText
+        android:id="@+id/textClassItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editLegs"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Class Item"
+        android:textSize="6pt"
+        android:layout_toLeftOf="@+id/editLegs"
+        android:layout_toStartOf="@+id/editLegs" />
+
+    <EditText
+        android:id="@+id/editTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/textTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="7"
+        android:inputType="textPersonName"
+        android:text="Light Total"
+        android:layout_alignBaseline="@+id/editTotal"
+        android:layout_alignBottom="@+id/editTotal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
