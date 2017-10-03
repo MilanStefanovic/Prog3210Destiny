@@ -59,6 +59,8 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textPowerWeapon"
         android:layout_toEndOf="@+id/textPowerWeapon"
+        android:hint="Enter Kinetic Light"
+        android:textSize="6pt"
         android:layout_marginTop="45dp" />
 
     <EditText
@@ -68,6 +70,8 @@
         android:ems="5"
         android:inputType="number"
         android:layout_below="@+id/editKineticWeapon"
+        android:hint="Enter Energy Light"
+        android:textSize="6pt"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -76,6 +80,8 @@
         android:layout_height="wrap_content"
         android:ems="5"
         android:inputType="number"
+        android:hint="Enter Power Light"
+        android:textSize="6pt"
         android:layout_below="@+id/editEnergyWeapon"
         android:layout_centerHorizontal="true" />
 
@@ -85,6 +91,8 @@
         android:layout_height="wrap_content"
         android:ems="5"
         android:inputType="number"
+        android:hint="Enter Helmet Light"
+        android:textSize="6pt"
         android:layout_below="@+id/editPowerWeapon"
         android:layout_alignLeft="@+id/editGauntlets"
         android:layout_alignStart="@+id/editGauntlets" />
@@ -95,6 +103,8 @@
         android:layout_height="wrap_content"
         android:ems="5"
         android:inputType="number"
+        android:hint="Enter Gauntlets Light"
+        android:textSize="6pt"
         android:layout_below="@+id/editHelmet"
         android:layout_centerHorizontal="true" />
 
@@ -104,6 +114,8 @@
         android:layout_height="wrap_content"
         android:ems="5"
         android:inputType="number"
+        android:hint="Enter Chest Light"
+        android:textSize="6pt"
         android:layout_below="@+id/editGauntlets"
         android:layout_alignLeft="@+id/editLegs"
         android:layout_alignStart="@+id/editLegs" />
@@ -115,6 +127,8 @@
         android:ems="5"
         android:inputType="number"
         android:layout_below="@+id/editChest"
+        android:hint="Enter Legs Light"
+        android:textSize="6pt"
         android:layout_alignLeft="@+id/editClassItem"
         android:layout_alignStart="@+id/editClassItem" />
 
@@ -124,6 +138,8 @@
         android:layout_height="wrap_content"
         android:ems="5"
         android:inputType="number"
+        android:hint="Enter Class Light"
+        android:textSize="6pt"
         android:layout_below="@+id/editLegs"
         android:layout_centerHorizontal="true" />
 
@@ -248,6 +264,7 @@
         android:layout_marginBottom="28dp"
         android:ems="10"
         android:inputType="number"
+        android:textSize="6pt"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -259,10 +276,9 @@
         android:ems="7"
         android:inputType="textPersonName"
         android:text="Light Total"
-        android:layout_alignBaseline="@+id/editTotal"
-        android:layout_alignBottom="@+id/editTotal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/editTotal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
